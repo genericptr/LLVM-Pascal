@@ -19,7 +19,7 @@
 }
 
 type
-  LLVMBool = longint;
+  LLVMBool = boolean;
   LLVMOpaqueType = pointer;
   LLVMMemoryBufferRef = type LLVMOpaqueType;
   LLVMContextRef = type LLVMOpaqueType;
