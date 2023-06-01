@@ -23,14 +23,17 @@
 unit LLVM.TargetMachine;
 interface
 uses
-  LLVM.Target;
-
+  LLVM.Types, LLVM.Target;
+  
 {$include LLVM.Macros.inc}
-{$include LLVM.Types.inc}
 
 type
-  LLVMTargetMachineRef = type LLVMOpaqueType;
-  LLVMTargetRef = type LLVMOpaqueType;
+  LLVMTargetMachineOpaqueType = record end;
+  LLVMTargetOpaqueType = record end;
+
+  LLVMTargetMachineRef = ^LLVMTargetMachineOpaqueType;
+  LLVMTargetRef = ^LLVMTargetOpaqueType;
+
   PLLVMTargetRef = ^LLVMTargetRef;
 
 type

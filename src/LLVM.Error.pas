@@ -22,15 +22,17 @@
 
 unit LLVM.Error;
 interface
+uses
+  LLVM.Types;
 
 {$include LLVM.Macros.inc}
-{$include LLVM.Types.inc}
 
 const
   LLVMErrorSuccess = 0;
 
 type
-  LLVMErrorRef = type LLVMOpaqueType;
+  LLVMErrorOpaqueType = record end;
+  LLVMErrorRef = ^LLVMErrorOpaqueType;
   LLVMErrorTypeId = pointer;
 
 function LLVMGetErrorTypeId(Err:LLVMErrorRef):LLVMErrorTypeId; LibLLVM;

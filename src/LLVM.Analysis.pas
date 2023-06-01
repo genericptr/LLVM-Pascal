@@ -20,9 +20,10 @@
 
 unit LLVM.Analysis;
 interface
-
+uses
+  LLVM.Types;
+  
 {$include LLVM.Macros.inc}
-{$include LLVM.Types.inc}
 
 type
   LLVMVerifierFailureAction = (

@@ -23,12 +23,11 @@
 unit LLVM.Core;
 interface
 uses
-  UnixType;
+  UnixType, LLVM.Types;
 
 // TODO: Missing `LLVM_FOR_EACH_VALUE_SUBCLASS`(macro) macros for `LLVMIsA*` functions
 
 {$include LLVM.Macros.inc}
-{$include LLVM.Types.inc}
 
 const
   LLVMAttributeReturnIndex = 0;

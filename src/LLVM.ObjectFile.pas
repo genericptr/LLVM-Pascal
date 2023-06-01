@@ -23,10 +23,9 @@
 unit LLVM.ObjectFile;
 interface
 uses
-  UnixType;
-  
+  UnixType, LLVM.Types;
+
 {$include LLVM.Macros.inc}
-{$include LLVM.Types.inc}
 
 type
   LLVMSectionIteratorRef = type LLVMOpaqueType;

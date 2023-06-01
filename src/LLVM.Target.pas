@@ -22,16 +22,21 @@
 
 unit LLVM.Target;
 interface
+uses
+  LLVM.Types;
 
 // TODO: `LLVM_TARGET` macros are missing and `LLVMInitialize*`
 
 {$include LLVM.Macros.inc}
-{$include LLVM.Types.inc}
 
 type
   LLVMByteOrdering = (LLVMBigEndian,LLVMLittleEndian);
-  LLVMTargetDataRef = type LLVMOpaqueType;
-  LLVMTargetLibraryInfoRef = type LLVMOpaqueType;
+  
+  LLVMTargetDataOpaqueType = record end;
+  LLVMTargetLibraryInfoOpaqueType = record end;
+
+  LLVMTargetDataRef = ^LLVMTargetDataOpaqueType;
+  LLVMTargetLibraryInfoRef = ^LLVMTargetLibraryInfoOpaqueType;
 
 function LLVMGetModuleDataLayout(M:LLVMModuleRef):LLVMTargetDataRef; LibLLVM;
 procedure LLVMSetModuleDataLayout(M:LLVMModuleRef; DL:LLVMTargetDataRef); LibLLVM;

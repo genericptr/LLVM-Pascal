@@ -22,9 +22,10 @@
 
 unit LLVM.IRReader;
 interface
+uses
+  LLVM.Types;
 
 {$include LLVM.Macros.inc}
-{$include LLVM.Types.inc}
 
 function LLVMParseIRInContext(ContextRef:LLVMContextRef; MemBuf:LLVMMemoryBufferRef; OutM:PLLVMModuleRef; OutMessage:PPchar):LLVMBool; LibLLVM;
 

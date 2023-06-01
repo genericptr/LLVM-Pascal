@@ -18,13 +18,14 @@
     Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 }
 
+{$mode objfpc}
+
 unit LLVM.DebugInfo;
 interface
 uses
-  UnixType;
+  UnixType, LLVM.Types;
 
 {$include LLVM.Macros.inc}
-{$include LLVM.Types.inc}
 
 type
     LLVMDIFlags = (LLVMDIFlagZero := 0,LLVMDIFlagPrivate := 1,

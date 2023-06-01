@@ -22,9 +22,10 @@
 
 unit LLVM.BitReader;
 interface
-
+uses
+  LLVM.Types;
+  
 {$include LLVM.Macros.inc}
-{$include LLVM.Types.inc}
 
 function LLVMParseBitcode(MemBuf:LLVMMemoryBufferRef; OutModule:PLLVMModuleRef; OutMessage:PPchar):LLVMBool; LibLLVM;
 function LLVMParseBitcode2(MemBuf:LLVMMemoryBufferRef; OutModule:PLLVMModuleRef):LLVMBool; LibLLVM;

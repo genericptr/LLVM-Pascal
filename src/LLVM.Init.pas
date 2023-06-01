@@ -22,9 +22,10 @@
 
 unit LLVM.Init;
 interface
+uses
+  LLVM.Types;
 
 {$include LLVM.Macros.inc}
-{$include LLVM.Types.inc}
 
 procedure LLVMInitializeCore(R:LLVMPassRegistryRef); LibLLVM;
 procedure LLVMInitializeTransformUtils(R:LLVMPassRegistryRef); LibLLVM;

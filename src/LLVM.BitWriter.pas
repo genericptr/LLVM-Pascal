@@ -22,9 +22,10 @@
 
 unit LLVM.BitWriter;
 interface
-  
+uses
+  LLVM.Types;
+
 {$include LLVM.Macros.inc}
-{$include LLVM.Types.inc}
 
 function LLVMWriteBitcodeToFile(M:LLVMModuleRef; Path:Pchar):longint; LibLLVM;
 function LLVMWriteBitcodeToFD(M:LLVMModuleRef; FD:longint; ShouldClose:longint; Unbuffered:longint):longint; LibLLVM;
