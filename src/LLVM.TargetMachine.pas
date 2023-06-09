@@ -28,12 +28,10 @@ uses
 {$include LLVM.Macros.inc}
 
 type
-  LLVMTargetMachineOpaqueType = record end;
-  LLVMTargetOpaqueType = record end;
+  LLVMTargetMachineRef = class end;
+  LLVMTargetRef = class end;
 
-  LLVMTargetMachineRef = ^LLVMTargetMachineOpaqueType;
-  LLVMTargetRef = ^LLVMTargetOpaqueType;
-
+type
   PLLVMTargetRef = ^LLVMTargetRef;
 
 type

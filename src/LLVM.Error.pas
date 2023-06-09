@@ -31,9 +31,8 @@ const
   LLVMErrorSuccess = 0;
 
 type
-  LLVMErrorOpaqueType = record end;
-  LLVMErrorRef = ^LLVMErrorOpaqueType;
-  LLVMErrorTypeId = pointer;
+  LLVMErrorRef = class end;
+  LLVMErrorTypeId = class end;
 
 function LLVMGetErrorTypeId(Err:LLVMErrorRef):LLVMErrorTypeId; LibLLVM;
 procedure LLVMConsumeError(Err:LLVMErrorRef); LibLLVM;

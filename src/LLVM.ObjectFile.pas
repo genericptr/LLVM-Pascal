@@ -28,10 +28,10 @@ uses
 {$include LLVM.Macros.inc}
 
 type
-  LLVMSectionIteratorRef = type LLVMOpaqueType;
-  LLVMSymbolIteratorRef = type LLVMOpaqueType;
-  LLVMRelocationIteratorRef = type LLVMOpaqueType;
-  LLVMObjectFileRef = type LLVMOpaqueType;
+  LLVMSectionIteratorRef = class end;
+  LLVMSymbolIteratorRef = class end;
+  LLVMRelocationIteratorRef = class end;
+  LLVMObjectFileRef = class end;
 
   LLVMBinaryType = (LLVMBinaryTypeArchive,LLVMBinaryTypeMachOUniversalBinary,
     LLVMBinaryTypeCOFFImportFile,LLVMBinaryTypeIR,

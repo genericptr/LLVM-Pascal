@@ -31,12 +31,8 @@ uses
 
 type
   LLVMByteOrdering = (LLVMBigEndian,LLVMLittleEndian);
-  
-  LLVMTargetDataOpaqueType = record end;
-  LLVMTargetLibraryInfoOpaqueType = record end;
-
-  LLVMTargetDataRef = ^LLVMTargetDataOpaqueType;
-  LLVMTargetLibraryInfoRef = ^LLVMTargetLibraryInfoOpaqueType;
+  LLVMTargetDataRef = class end;
+  LLVMTargetLibraryInfoRef = class end;
 
 function LLVMGetModuleDataLayout(M:LLVMModuleRef):LLVMTargetDataRef; LibLLVM;
 procedure LLVMSetModuleDataLayout(M:LLVMModuleRef; DL:LLVMTargetDataRef); LibLLVM;
