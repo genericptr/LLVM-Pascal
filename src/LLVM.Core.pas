@@ -496,8 +496,8 @@ type
   function LLVMIntrinsicCopyOverloadedName(ID: dword; ParamTypes: PLLVMTypeRef; ParamCount: size_t; out NameLength: size_t):PChar; LibLLVM;
   function LLVMIntrinsicCopyOverloadedName2(&Mod: LLVMModuleRef; ID: dword; ParamTypes: PLLVMTypeRef; ParamCount: size_t; out NameLength: size_t):PChar; LibLLVM;
   function LLVMIntrinsicIsOverloaded(ID: dword):LLVMBool; LibLLVM;
-  function LLVMGetFunctionCallConv(Fn: LLVMValueRef):dword; LibLLVM;
-  procedure LLVMSetFunctionCallConv(Fn: LLVMValueRef; CC: dword); LibLLVM;
+  function LLVMGetFunctionCallConv(Fn: LLVMValueRef):LLVMCallConv; LibLLVM;
+  procedure LLVMSetFunctionCallConv(Fn: LLVMValueRef; CC: LLVMCallConv); LibLLVM;
   function LLVMGetGC(Fn: LLVMValueRef):PChar; LibLLVM;
   procedure LLVMSetGC(Fn: LLVMValueRef; Name: Pchar); LibLLVM;
   procedure LLVMAddAttributeAtIndex(F: LLVMValueRef; Idx: LLVMAttributeIndex; A: LLVMAttributeRef); LibLLVM;
