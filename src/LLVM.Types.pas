@@ -23,6 +23,9 @@
 unit LLVM.Types;
 interface
 
+const
+  LLVMErrorSuccess = 0;
+
 type
   LLVMBool = boolean;
 
@@ -48,6 +51,8 @@ type
   LLVMModuleFlagEntry = class end;
   LLVMJITEventListenerRef = class end;
   LLVMBinaryRef = class end;
+  LLVMErrorRef = class end;
+  LLVMErrorTypeId = class end;
 
 type
   PLLVMAttributeRef = ^LLVMAttributeRef;

@@ -27,13 +27,6 @@ uses
 
 {$include LLVM.Macros.inc}
 
-const
-  LLVMErrorSuccess = 0;
-
-type
-  LLVMErrorRef = class end;
-  LLVMErrorTypeId = class end;
-
 function LLVMGetErrorTypeId(Err:LLVMErrorRef):LLVMErrorTypeId; LibLLVM;
 procedure LLVMConsumeError(Err:LLVMErrorRef); LibLLVM;
 function LLVMGetErrorMessage(Err:LLVMErrorRef):Pchar; LibLLVM;
